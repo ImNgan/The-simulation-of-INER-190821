@@ -1,0 +1,59 @@
+# ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+# HPGe_COLLIMATOR
+# ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/gate/world/daughters/name                  		HPGe_collimator
+/gate/world/daughters/insert                		box
+/gate/HPGe_collimator/setMaterial               	Air
+/gate/HPGe_collimator/geometry/setXLength        	21.5 cm
+/gate/HPGe_collimator/geometry/setYLength        	20 cm
+/gate/HPGe_collimator/geometry/setZLength        	10 cm
+/gate/HPGe_collimator/placement/setTranslation		350.05 5.0 33. cm
+/gate/HPGe_collimator/vis/setColor              	red
+/gate/HPGe_collimator/vis/setLineStyle			dashed
+/gate/HPGe_collimator/vis/setVisible 			1
+	
+	/gate/HPGe_collimator/daughters/name              	Pb_collimator_1
+	/gate/HPGe_collimator/daughters/insert            	box
+	/gate/Pb_collimator_1/setMaterial             		Lead
+	/gate/Pb_collimator_1/geometry/setXLength        	10 cm
+	/gate/Pb_collimator_1/geometry/setYLength        	20 cm
+	/gate/Pb_collimator_1/geometry/setZLength        	5 cm
+	/gate/Pb_collimator_1/placement/setTranslation		5.75 0.0 2.5 cm
+	/gate/Pb_collimator_1/vis/setColor              	blue
+	/gate/Pb_collimator_1/vis/forceSolid
+	/gate/Pb_collimator_1/vis/setVisible 			1
+	
+	/gate/HPGe_collimator/daughters/name              	Pb_collimator_2
+	/gate/HPGe_collimator/daughters/insert            	box
+	/gate/Pb_collimator_2/setMaterial             		Lead
+	/gate/Pb_collimator_2/geometry/setXLength        	10 cm
+	/gate/Pb_collimator_2/geometry/setYLength        	20 cm
+	/gate/Pb_collimator_2/geometry/setZLength        	5 cm
+	/gate/Pb_collimator_2/placement/setTranslation		-5.75 0.0 2.5 cm
+	/gate/Pb_collimator_2/vis/setColor              	blue
+	/gate/Pb_collimator_2/vis/forceSolid
+	/gate/Pb_collimator_2/vis/setVisible 			1
+	
+	/gate/HPGe_collimator/daughters/name              	Pb_collimator_3
+	/gate/HPGe_collimator/daughters/insert            	box
+	/gate/Pb_collimator_3/setMaterial             		Lead
+	/gate/Pb_collimator_3/geometry/setXLength        	10 cm
+	/gate/Pb_collimator_3/geometry/setYLength        	15 cm
+	/gate/Pb_collimator_3/geometry/setZLength        	5 cm
+	/gate/Pb_collimator_3/placement/setTranslation		0.0 -2.5 -2.5 cm
+	/gate/Pb_collimator_3/vis/setColor              	blue
+	/gate/Pb_collimator_3/vis/forceSolid
+	/gate/Pb_collimator_3/vis/setVisible 			1
+	
+		/gate/Pb_collimator_3/daughters/name                  		Collimator_hole
+		/gate/Pb_collimator_3/daughters/insert                		cylinder
+		/gate/Collimator_hole/setMaterial               		Air
+		/gate/Collimator_hole/geometry/setRmin          		0 cm
+		/gate/Collimator_hole/geometry/setRmax          		1.75 cm
+		/gate/Collimator_hole/geometry/setHeight        		5 cm
+		/gate/Collimator_hole/placement/setTranslation			0.0 -2.5 0.0 cm
+		/gate/Collimator_hole/vis/setColor              		white
+		/gate/Collimator_hole/vis/setLineStyle				dashed
+		/gate/Collimator_hole/vis/setVisible 				1
+	
+	

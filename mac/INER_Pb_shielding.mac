@@ -1,0 +1,36 @@
+# ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+# HPGe_DETECTOR
+# ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+			
+	/gate/world/daughters/name              	Pb_outside1
+	/gate/world/daughters/insert            	box
+	/gate/Pb_outside1/setMaterial               	 	Lead
+	/gate/Pb_outside1/geometry/setXLength        		5 cm
+	/gate/Pb_outside1/geometry/setYLength        		10 cm
+	/gate/Pb_outside1/geometry/setZLength        		20 cm
+	/gate/Pb_outside1/placement/setTranslation		342.55 0.0 48.0 cm
+	/gate/Pb_outside1/vis/setColor              		red
+	/gate/Pb_outside1/vis/forceSolid			
+	/gate/Pb_outside1/vis/setVisible 			0
+	
+	/gate/world/daughters/name              	Pb_outside2
+	/gate/world/daughters/insert            	box
+	/gate/Pb_outside2/setMaterial               	 	Lead
+	/gate/Pb_outside2/geometry/setXLength        		5 cm
+	/gate/Pb_outside2/geometry/setYLength        		10 cm
+	/gate/Pb_outside2/geometry/setZLength        		20 cm
+	/gate/Pb_outside2/placement/setTranslation		357.55 0.0 48.0 cm
+	/gate/Pb_outside2/vis/setColor              		red
+	/gate/Pb_outside2/vis/forceSolid		
+	/gate/Pb_outside2/vis/setVisible 			0
+	
+	/gate/world/daughters/name              	Pb_outside3
+	/gate/world/daughters/insert            	box
+	/gate/Pb_outside3/setMaterial               	 	Lead
+	/gate/Pb_outside3/geometry/setXLength        		10 cm
+	/gate/Pb_outside3/geometry/setYLength        		5 cm
+	/gate/Pb_outside3/geometry/setZLength        		20 cm
+	/gate/Pb_outside3/placement/setTranslation		350.05 7.5 48. cm
+	/gate/Pb_outside3/vis/setColor              		red
+	/gate/Pb_outside3/vis/forceSolid			
+	/gate/Pb_outside3/vis/setVisible 			0

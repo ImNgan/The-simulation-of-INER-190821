@@ -1,0 +1,110 @@
+
+#=====================================================
+# VERBOSITY
+#=====================================================
+
+/control/execute mac/verbose.mac
+
+#=====================================================
+# VISUALISATION
+#=====================================================
+
+/control/execute mac/visu.mac
+
+# =====================================================
+# GEOMETRY
+# =====================================================
+
+/gate/geometry/setMaterialDatabase   data/GateMaterials_INER.db
+
+# -----------------------------------------------------
+# WORLD
+# -----------------------------------------------------
+
+/gate/world/setMaterial            Air
+/gate/world/geometry/setXLength    8.5 m
+/gate/world/geometry/setYLength    2 m
+/gate/world/geometry/setZLength    2 m
+
+# -----------------------------------------------------
+# BEAM PIPE
+# -----------------------------------------------------
+
+/control/execute			mac/INER_beam_pipe.mac
+
+# -----------------------------------------------------
+# TARGET
+# -----------------------------------------------------
+
+/control/execute			mac/INER_target.mac
+
+# -----------------------------------------------------
+# HPGe DETECTOR
+# -----------------------------------------------------
+
+/control/execute			mac/INER_HPGe_final.mac
+
+# -----------------------------------------------------
+# COLLIMATOR
+# -----------------------------------------------------
+
+#/control/execute			mac/INER_collimator.mac
+
+# -----------------------------------------------------
+# FARADAY CUP
+# -----------------------------------------------------
+
+#/control/execute			mac/INER_faraday_cup.mac
+
+# =====================================================
+# PHYSICS:
+# =====================================================
+
+/gate/physics/addPhysicsList 		QGSP_BIC_HP_EMY
+
+/gate/physics/Gamma/SetCutInRegion      world 0.1 mm
+/gate/physics/Electron/SetCutInRegion   world 0.1 mm
+/gate/physics/Positron/SetCutInRegion   world 0.1 mm
+
+#=====================================================
+# DETECTORS:
+#=====================================================
+
+# ----------------------------------------------------
+# the following actor regularly store the current number of event/track/step in a file
+# ----------------------------------------------------
+
+/gate/actor/addActor               		     SimulationStatisticActor stat
+/gate/actor/stat/save              		     output-PhS.txt
+/gate/actor/stat/saveEveryNSeconds 		     20
+
+/gate/actor/addActor  EnergySpectrumActor                MyActor1
+/gate/actor/MyActor1/attachTo                    	 target
+/gate/actor/MyActor1/save                                output/EnergySpectrum.root
+/gate/actor/MyActor1/energySpectrum/setEmin              0 eV
+/gate/actor/MyActor1/energySpectrum/setEmax              15 MeV
+/gate/actor/MyActor1/energySpectrum/setNumberOfBins      1000
+/gate/actor/MyActor1/enableEdepSpectrum                  true
+/gate/actor/MyActor1/enableEdepHisto          		 true
+/gate/actor/MyActor1/normalizeToNbPrimaryEvents          true
+/gate/actor/MyActor1/enableNbPartSpectrum                true
+
+# INITIALISATION
+#=====================================================
+
+/gate/run/initialize
+
+#=====================================================
+# BEAMS
+#=====================================================
+
+/control/execute		mac/INER_beam.mac
+
+#=====================================================
+# START BEAMS
+#=====================================================
+/gate/random/setEngineName MersenneTwister
+/gate/random/setEngineSeed auto
+/gate/application/noGlobalOutput
+/gate/application/setTotalNumberOfPrimaries 0
+/gate/application/start

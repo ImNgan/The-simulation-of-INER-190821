@@ -1,0 +1,118 @@
+
+# ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+##  GE CRYSTAL
+# ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+		/gate/HPGe_hole/daughters/name                  	Ge
+		/gate/HPGe_hole/daughters/insert                	cylinder             
+		/gate/Ge/setMaterial               	 		Vacuum
+		/gate/Ge/geometry/setRmin          			0 cm
+		/gate/Ge/geometry/setRmax          			2.865 cm
+		/gate/Ge/geometry/setHeight        			5.75 cm
+		/gate/Ge/placement/setTranslation			0.0 0.0 -6.475 cm
+		/gate/Ge/vis/setColor              			black
+		/gate/Ge/vis/forceWireframe
+		/gate/Ge/vis/setVisible 				1
+
+##############  DEAD LAYER at the front of + at the side of the Ge crystal ####
+		
+			/gate/Ge/daughters/name                  		Dead_side_FRONT
+			/gate/Ge/daughters/insert                		cylinder             
+			/gate/Dead_side_FRONT/setMaterial               	Germanium
+			/gate/Dead_side_FRONT/geometry/setRmin          	0 cm
+			/gate/Dead_side_FRONT/geometry/setRmax          	2.865 cm
+			/gate/Dead_side_FRONT/geometry/setHeight        	0.142 cm
+			/gate/Dead_side_FRONT/placement/setTranslation		0.0 0.0 -2.804 cm
+			/gate/Dead_side_FRONT/vis/setColor              	magenta
+			/gate/Dead_side_FRONT/vis/forceWireframe
+			/gate/Dead_side_FRONT/vis/setVisible 			1
+				
+			/gate/Ge/daughters/name                  		Dead_side
+			/gate/Ge/daughters/insert                		cylinder             
+			/gate/Dead_side/setMaterial               		Germanium
+			/gate/Dead_side/geometry/setRmin          		2.717 cm
+			/gate/Dead_side/geometry/setRmax          		2.865 cm
+			/gate/Dead_side/geometry/setHeight        		5.608 cm
+			/gate/Dead_side/placement/setTranslation		0.0 0.0 0.071 cm
+			/gate/Dead_side/vis/setColor              		magenta
+			/gate/Dead_side/vis/forceWireframe
+			/gate/Dead_side/vis/setVisible 			1
+			
+##############  ACTIVE LAYER of the Ge crystal ####	
+
+
+			/gate/Ge/daughters/name                  		Active_FRONT
+			/gate/Ge/daughters/insert                		cylinder             
+			/gate/Active_FRONT/setMaterial               		Germanium
+			/gate/Active_FRONT/geometry/setRmin          		0 cm
+			/gate/Active_FRONT/geometry/setRmax          		2.717 cm
+			/gate/Active_FRONT/geometry/setHeight        		1.088 cm
+			/gate/Active_FRONT/placement/setTranslation		0.0 0.0 -2.189 cm
+			/gate/Active_FRONT/vis/setColor              		green
+			/gate/Active_FRONT/vis/forceSolid
+			/gate/Active_FRONT/vis/setVisible 			1
+	
+			
+			/gate/Ge/daughters/name                  		Active_layer
+			/gate/Ge/daughters/insert                		cylinder             
+			/gate/Active_layer/setMaterial               		Germanium
+			/gate/Active_layer/geometry/setRmin          		0.54 cm
+			/gate/Active_layer/geometry/setRmax          		2.717 cm
+			/gate/Active_layer/geometry/setHeight        		4.52 cm
+			/gate/Active_layer/placement/setTranslation		0.0 0.0 0.615 cm
+			/gate/Active_layer/vis/setColor              		green
+			/gate/Active_layer/vis/forceWireframe
+			/gate/Active_layer/vis/setVisible 	     		1
+			
+##############  DEAD LAYER AROUND ####	
+			
+			/gate/Ge/daughters/name			  Dead_around_FRONT
+			/gate/Ge/daughters/insert			  cylinder             
+			/gate/Dead_around_FRONT/setMaterial              Germanium
+			/gate/Dead_around_FRONT/geometry/setRmin         0 cm
+			/gate/Dead_around_FRONT/geometry/setRmax         0.54 cm
+			/gate/Dead_around_FRONT/geometry/setHeight       0.12  cm
+			/gate/Dead_around_FRONT/placement/setTranslation 0.0 0.0 -1.585 cm
+			/gate/Dead_around_FRONT/vis/setColor             magenta
+			/gate/Dead_around_FRONT/vis/forceSolid
+			/gate/Dead_around_FRONT/vis/setVisible		 1 			
+		
+			/gate/Ge/daughters/name                  	Dead_around
+			/gate/Ge/daughters/insert                	cylinder             
+			/gate/Dead_around/setMaterial               	Germanium
+			/gate/Dead_around/geometry/setRmin          	0.42 cm
+			/gate/Dead_around/geometry/setRmax          	0.54 cm
+			/gate/Dead_around/geometry/setHeight        	4.4  cm
+			/gate/Dead_around/placement/setTranslation	0.0 0.0 0.675 cm
+			/gate/Dead_around/vis/setColor              	magenta
+			/gate/Dead_around/vis/forceWireframe
+			/gate/Dead_around/vis/setVisible 		1	
+		
+		
+##############  CU CONTACT ####
+
+			/gate/Ge/daughters/name                  	Cu_Contact
+			/gate/Ge/daughters/insert			cylinder             
+			/gate/Cu_Contact/setMaterial               	Copper
+			/gate/Cu_Contact/geometry/setRmin          	0 cm
+			/gate/Cu_Contact/geometry/setRmax          	0.21 cm
+			/gate/Cu_Contact/geometry/setHeight        	4.4 cm
+			/gate/Cu_Contact/placement/setTranslation	0.0 0.0 0.675 cm
+			/gate/Cu_Contact/vis/setColor              	red
+			/gate/Cu_Contact/vis/forceSolid
+			/gate/Cu_Contact/vis/setVisible 		1
+
+# A T T A C H S Y S T E M ....
+/gate/systems/scanner/level1/attach Ge
+/gate/systems/scanner/level2/attach Dead_side_FRONT
+/gate/systems/scanner/level2/attach Dead_side
+/gate/systems/scanner/level2/attach Active_FRONT
+/gate/systems/scanner/level2/attach Active_layer
+/gate/systems/scanner/level2/attach Dead_around_FRONT
+/gate/systems/scanner/level2/attach Dead_around
+/gate/systems/scanner/level2/attach Cu_Contact
+
+# A T T A C H C R Y S T A L S D
+/gate/Active_FRONT/attachCrystalSD
+/gate/Active_layer/attachCrystalSD
+

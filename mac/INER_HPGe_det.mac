@@ -1,0 +1,84 @@
+# ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+# HPGe_DETECTOR
+# ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/gate/world/daughters/name              	scanner
+/gate/world/daughters/insert            	box
+/gate/scanner/setMaterial               	Lead
+/gate/scanner/geometry/setXLength        	10 cm
+/gate/scanner/geometry/setYLength        	10 cm
+/gate/scanner/geometry/setZLength        	20 cm
+/gate/scanner/placement/setTranslation		350.05  0.0  48. cm
+/gate/scanner/vis/setColor              	gray
+/gate/scanner/vis/forceWireframe
+/gate/scanner/vis/setVisible 			0
+	
+## ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+##  HPGe HOLE
+## ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+	/gate/scanner/daughters/name                  		HPGe_hole
+	/gate/scanner/daughters/insert                		cylinder
+	/gate/HPGe_hole/setMaterial               		Air
+	/gate/HPGe_hole/geometry/setRmin          		0 cm
+	/gate/HPGe_hole/geometry/setRmax          		4 cm
+	/gate/HPGe_hole/geometry/setHeight        		20 cm
+	/gate/HPGe_hole/placement/setTranslation		0.0 0.0 0.0 cm
+	/gate/HPGe_hole/vis/setColor              		white
+	/gate/HPGe_hole/vis/setLineStyle			dashed
+	/gate/HPGe_hole/vis/setVisible 			0
+
+#### ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+##  AL_ENDCAP
+#### ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+		/gate/HPGe_hole/daughters/name                  	Al_endcap_infrontof
+		/gate/HPGe_hole/daughters/insert                	cylinder 
+		/gate/Al_endcap_infrontof/setMaterial               	Aluminium
+		/gate/Al_endcap_infrontof/geometry/setRmin          	0 cm
+		/gate/Al_endcap_infrontof/geometry/setRmax          	3.95 cm
+		/gate/Al_endcap_infrontof/geometry/setHeight       	0.15 cm
+		/gate/Al_endcap_infrontof/placement/setTranslation	0.0 0.0 -9.925 cm
+		/gate/Al_endcap_infrontof/vis/setColor              	gray
+		/gate/Al_endcap_infrontof/vis/forceWireframe
+		/gate/Al_endcap_infrontof/vis/setVisible 		1
+
+		/gate/HPGe_hole/daughters/name                  	Al_endcap
+		/gate/HPGe_hole/daughters/insert                	cylinder 
+		/gate/Al_endcap/setMaterial               		Aluminium
+		/gate/Al_endcap/geometry/setRmin          		3.8 cm
+		/gate/Al_endcap/geometry/setRmax          		3.95 cm
+		/gate/Al_endcap/geometry/setHeight       		7.6 cm
+		/gate/Al_endcap/placement/setTranslation		0.0 0.0 -6.05 cm
+		/gate/Al_endcap/vis/setColor            		gray
+		/gate/Al_endcap/vis/forceWireframe
+		/gate/Al_endcap/vis/setVisible 			1
+	
+#### ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+## AL_COVER
+#### ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~		
+		
+		/gate/HPGe_hole/daughters/name                   	Al_cover_infrontof
+		/gate/HPGe_hole/daughters/insert                 	cylinder  
+		/gate/Al_cover_infrontof/setMaterial               	Aluminium
+		/gate/Al_cover_infrontof/geometry/setRmin          	0 cm
+		/gate/Al_cover_infrontof/geometry/setRmax          	2.94 cm   ### 2.865+0.075
+		/gate/Al_cover_infrontof/geometry/setHeight        	0.05 cm
+		/gate/Al_cover_infrontof/placement/setTranslation	0.0 0.0 -9.375 cm
+		/gate/Al_cover_infrontof/vis/setColor              	gray
+		/gate/Al_cover_infrontof/vis/forceWireframe
+		/gate/Al_cover_infrontof/vis/setVisible 		1
+		
+		
+		/gate/HPGe_hole/daughters/name                  	Al_cover_side
+		/gate/HPGe_hole/daughters/insert                	cylinder  
+		/gate/Al_cover_side/setMaterial               		Aluminium
+		/gate/Al_cover_side/geometry/setRmin          		2.865 cm
+		/gate/Al_cover_side/geometry/setRmax          		2.94 cm
+		/gate/Al_cover_side/geometry/setHeight        		5.75 cm
+		/gate/Al_cover_side/placement/setTranslation		0.0 0.0 -6.475 cm
+		/gate/Al_cover_side/vis/setColor              		gray
+		/gate/Al_cover_side/vis/forceWireframe
+		/gate/Al_cover_side/vis/setVisible 			1
+#### ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+##  GE CRYSTAL
+#### ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+		/control/execute					mac/INER_Ge.mac
+		
