@@ -42,13 +42,13 @@
 # HPGe DETECTOR
 # -----------------------------------------------------
 
-#/control/execute			mac/INER_HPGe_det.mac
+/control/execute			mac/INER_HPGe_det.mac
 
 # -----------------------------------------------------
 # COLLIMATOR
 # -----------------------------------------------------
 
-#/control/execute			mac/INER_collimator.mac
+/control/execute			mac/INER_collimator.mac
 
 # -----------------------------------------------------
 # FARADAY CUP
