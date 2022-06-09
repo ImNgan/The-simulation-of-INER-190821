@@ -42,15 +42,15 @@
 # HPGe DETECTOR
 # -----------------------------------------------------
 
-/control/execute			mac/INER_HPGe_final.mac
+/control/execute			mac/INER_HPGe_det.mac
 
-#/control/execute			mac/INER_Pb_shielding.mac
+/control/execute			mac/INER_Pb_shielding.mac
 
 # -----------------------------------------------------
 # COLLIMATOR
 # -----------------------------------------------------
 
-#/control/execute			mac/INER_collimator.mac
+/control/execute			mac/INER_collimator.mac
 
 # -----------------------------------------------------
 # FARADAY CUP
@@ -68,7 +68,6 @@
 /gate/physics/Electron/SetCutInRegion   world 0.1 mm
 /gate/physics/Positron/SetCutInRegion   world 0.1 mm
 
-
 #=====================================================
 # INITIALISATION
 #=====================================================
@@ -79,7 +78,7 @@
 # BEAMS
 #=====================================================
 
-/gate/source/addSource 		PBS gps
+/gate/source/addSource 			PBS gps
 /gate/source/PBS/gps/particle		gamma
 #/gate/source/PBS/gps/direction 	0 0 1 
 /gate/source/PBS/gps/ang/type 		iso
@@ -94,15 +93,15 @@
 # D I G I T I Z E R
 #=====================
 
-/gate/digitizer/name	Singles
+/gate/digitizer/name		Singles
 
 #	A D D E R
-/gate/digitizer/Singles/insert adder
+/gate/digitizer/Singles/insert 	adder
 
 
 #       R E A D O U T 
-/gate/digitizer/Singles/insert readout
-/gate/digitizer/Singles/readout/setDepth 1
+/gate/digitizer/Singles/insert 	readout
+/gate/digitizer/Singles/readout/setDepth 	1
 
 #=====================================================
 #  D A T A   O U T P U T   
