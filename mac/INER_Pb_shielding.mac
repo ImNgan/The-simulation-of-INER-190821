@@ -2,8 +2,8 @@
 # HPGe_DETECTOR
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 			
-	/gate/world/daughters/name              	Pb_outside1
-	/gate/world/daughters/insert            	box
+	/gate/world/daughters/name              		Pb_outside1
+	/gate/world/daughters/insert            		box
 	/gate/Pb_outside1/setMaterial               	 	Lead
 	/gate/Pb_outside1/geometry/setXLength        		5 cm
 	/gate/Pb_outside1/geometry/setYLength        		10 cm
@@ -13,8 +13,8 @@
 	/gate/Pb_outside1/vis/forceSolid			
 	/gate/Pb_outside1/vis/setVisible 			0
 	
-	/gate/world/daughters/name              	Pb_outside2
-	/gate/world/daughters/insert            	box
+	/gate/world/daughters/name              		Pb_outside2
+	/gate/world/daughters/insert            		box
 	/gate/Pb_outside2/setMaterial               	 	Lead
 	/gate/Pb_outside2/geometry/setXLength        		5 cm
 	/gate/Pb_outside2/geometry/setYLength        		10 cm
@@ -24,8 +24,8 @@
 	/gate/Pb_outside2/vis/forceSolid		
 	/gate/Pb_outside2/vis/setVisible 			0
 	
-	/gate/world/daughters/name              	Pb_outside3
-	/gate/world/daughters/insert            	box
+	/gate/world/daughters/name              		Pb_outside3
+	/gate/world/daughters/insert            		box
 	/gate/Pb_outside3/setMaterial               	 	Lead
 	/gate/Pb_outside3/geometry/setXLength        		10 cm
 	/gate/Pb_outside3/geometry/setYLength        		5 cm
