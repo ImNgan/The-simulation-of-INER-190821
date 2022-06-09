@@ -3,15 +3,15 @@
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 /gate/world/daughters/name                  	target
 /gate/world/daughters/insert                	box
-/gate/target/setMaterial               	Carbon
-/gate/target/geometry/setXLength          	0.1 cm
-/gate/target/geometry/setYLength          	1 cm
-/gate/target/geometry/setZLength       	1 cm
-/gate/target/placement/setTranslation  	350.05 0.0 0.0 cm
-/gate/target/placement/setRotationAxis     	0 1 0
-/gate/target/placement/setRotationAngle   	45 deg
-/gate/target/vis/setColor              	yellow
+/gate/target/setMaterial               	      Carbon
+/gate/target/geometry/setXLength          	  0.1 cm
+/gate/target/geometry/setYLength          	  1 cm
+/gate/target/geometry/setZLength       	      1 cm
+/gate/target/placement/setTranslation  	      350.05 0.0 0.0 cm
+/gate/target/placement/setRotationAxis     	  0 1 0
+/gate/target/placement/setRotationAngle   	  45 deg
+/gate/target/vis/setColor              	      yellow
 /gate/target/vis/forceSolid			
-/gate/target/vis/setVisible 			1
+/gate/target/vis/setVisible 			            1
 
 
