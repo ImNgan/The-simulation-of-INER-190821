@@ -24,7 +24,7 @@
 	/gate/HPGe_hole/placement/setTranslation		0.0 0.0 0.0 cm
 	/gate/HPGe_hole/vis/setColor              		white
 	/gate/HPGe_hole/vis/setLineStyle			dashed
-	/gate/HPGe_hole/vis/setVisible 			0
+	/gate/HPGe_hole/vis/setVisible 				0
 
 #### ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 ##  AL_ENDCAP
@@ -49,7 +49,7 @@
 		/gate/Al_endcap/placement/setTranslation		0.0 0.0 -6.05 cm
 		/gate/Al_endcap/vis/setColor            		gray
 		/gate/Al_endcap/vis/forceWireframe
-		/gate/Al_endcap/vis/setVisible 			1
+		/gate/Al_endcap/vis/setVisible 				1
 	
 #### ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 ## AL_COVER
