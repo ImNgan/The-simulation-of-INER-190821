@@ -15,6 +15,6 @@
 /gate/verbose Core      1
 
 #GEANT4 verbose
-/run/verbose 0
-/event/verbose 0
-/tracking/verbose 0
+/run/verbose            0
+/event/verbose          0
+/tracking/verbose       0
