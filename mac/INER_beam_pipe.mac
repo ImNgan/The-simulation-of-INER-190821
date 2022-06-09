@@ -12,7 +12,7 @@
 /gate/beam_pipe/placement/setRotationAngle   	90 deg
 /gate/beam_pipe/vis/setColor              	gray
 /gate/beam_pipe/vis/forceWireframe
-/gate/beam_pipe/vis/setVisible 		1
+/gate/beam_pipe/vis/setVisible 			1
 
 	/gate/beam_pipe/daughters/name                 exit_window 	
 	/gate/beam_pipe/daughters/insert               cylinder
