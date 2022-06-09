@@ -14,7 +14,7 @@
 		/gate/Ge/vis/forceWireframe
 		/gate/Ge/vis/setVisible 				1
 
-##############  DEAD LAYER at the front of + at the side of the Ge crystal ####
+##############  DEAD LAYER at the front of + at the side of the Ge crystal ####################
 		
 			/gate/Ge/daughters/name                  		Dead_side_FRONT
 			/gate/Ge/daughters/insert                		cylinder             
@@ -38,7 +38,7 @@
 			/gate/Dead_side/vis/forceWireframe
 			/gate/Dead_side/vis/setVisible 			1
 			
-##############  ACTIVE LAYER of the Ge crystal ####	
+##############  ACTIVE LAYER of the Ge crystal ####################
 
 
 			/gate/Ge/daughters/name                  		Active_FRONT
@@ -64,7 +64,7 @@
 			/gate/Active_layer/vis/forceWireframe
 			/gate/Active_layer/vis/setVisible 	     		1
 			
-##############  DEAD LAYER AROUND ####	
+##############  DEAD LAYER between Active Volume and Contact ####################	
 			
 			/gate/Ge/daughters/name			  Dead_around_FRONT
 			/gate/Ge/daughters/insert			  cylinder             
@@ -89,7 +89,7 @@
 			/gate/Dead_around/vis/setVisible 		1	
 		
 		
-##############  CU CONTACT ####
+##############  CU CONTACT ########################################
 
 			/gate/Ge/daughters/name                  	Cu_Contact
 			/gate/Ge/daughters/insert			cylinder             
